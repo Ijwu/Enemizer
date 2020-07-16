@@ -347,13 +347,23 @@ namespace EnemizerLibrary
         {
             get
             {
-                // item randomizer
+                // item randomizer (VT)
                 if (romData[0x7FC0] == 0x56 && romData[0x7FC1] == 0x54)
                 {
                     return true;
                 }
-                // entrance randomizer
+                // entrance randomizer (ER)
                 if (romData[0x7FC0] == 0x45 && romData[0x7FC1] == 0x52)
+                {
+                    return true;
+                }
+                // door randomizer (DR)
+                if (romData[0x7FC0] == 0x44 && romData[0x7FC1] == 0x52)
+                {
+                    return true;
+                }
+                // berserker multiworld (BM)
+                if (romData[0x7FC0] == 0x42 && romData[0x7FC1] == 0x4D)
                 {
                     return true;
                 }
