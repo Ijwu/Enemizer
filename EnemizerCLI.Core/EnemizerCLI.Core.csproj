@@ -1,10 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>E:\Enemizer-master\Backup\EnemizerCLI.Core\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="bosses_gfx\Agahnim\agahlink.zip" />
     <None Remove="bosses_gfx\ArmosKnight\Arrgmos.zip" />
@@ -113,7 +120,6 @@
     <None Remove="tiles\ze.json" />
     <None Remove="weapons\mace.bin" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="bosses_gfx\Agahnim\agahlink.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -311,7 +317,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="sword_gfx\normal.gfx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -437,16 +442,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.3.2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\EnemizerLibrary\EnemizerLibrary.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <None Update="EnemizerVersion.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1157,5 +1159,4 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
 </Project>
