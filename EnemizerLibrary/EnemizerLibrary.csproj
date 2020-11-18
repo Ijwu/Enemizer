@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Version>6.3.0</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <FileUpgradeFlags>40</FileUpgradeFlags>
